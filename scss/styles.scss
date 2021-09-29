@@ -79,6 +79,34 @@ $light-brown: #A67356;
     }
 }
 
+.burger{
+    position: relative;
+    // background-color: white;
+    width: 30px;
+    height: 11px;
+    @extend %flex-element-center;
+    display: none;
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $text-color;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        height: 2px;
+        background-color: $text-color;
+    }
+}
+
 .page{
     flex: 1 1 auto;
 
@@ -124,9 +152,13 @@ $light-brown: #A67356;
             @extend %flex-element-center;
             border: 1px solid #403F3E;
             @include font(20px, $text-color, 400, 127%);
+            transition: all .3s;
             &:not(:last-child){
                 margin-right: 30px;
             }
+            // &:hover{
+
+            // }
         }
     }
 }
@@ -135,6 +167,10 @@ $light-brown: #A67356;
     background-color: $light-brown;
     color: #f2f2f2;
     border: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+        opacity: .8;   
+    }
 }
 
 
@@ -221,10 +257,7 @@ $light-brown: #A67356;
             max-width: 428px;
         }
     }
-    .page-block__image{
-        opacity: .7;
-    }
-
+    
 }
 
 @media screen and (max-width: 1020px){
@@ -238,6 +271,44 @@ $light-brown: #A67356;
 }
 
 @media screen and (max-width: 992px){
+    // .page-block{
+    //     &__buttons{
+    //         flex-direction: column;
+    //     }
+    //     &__button{
+    //         &:not(:last-child){
+    //             margin-bottom: 25px;
+    //             margin-right: 0;
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width: 767px){
+    .header{
+        padding: 15px 0;
+        &__logo{
+            width: 50px;
+            height: 50px;
+            margin-right: 0;
+        }
+        &__container{
+            min-height: 60px;
+            justify-content: space-between;
+        }
+    }
+    .menu__item{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .page-block__content{
+        padding: 180px 0 140px 0;
+        & > *:not(:last-child){
+            margin-bottom: 38px;
+        }
+    }
     .page-block{
         &__buttons{
             flex-direction: column;
