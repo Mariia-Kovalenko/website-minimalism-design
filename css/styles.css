@@ -161,14 +161,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .page-block__buttons > *:not(:last-child) {
   margin-right: 30px;
 }
 .page-block__button {
-  width: 227px;
+  padding: 5px 50px;
   min-height: 60px;
   outline: 1px solid #403F3E;
+  font-size: 20px;
+  color: #403F3E;
+  font-weight: 400;
+  line-height: 127%;
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -194,8 +200,12 @@
   z-index: 1;
 }
 .page-block__button-brown {
-  width: 227px;
+  padding: 5px 40px;
   min-height: 60px;
+  font-size: 20px;
+  color: #403F3E;
+  font-weight: 400;
+  line-height: 127%;
   background-color: #A67356;
   outline: 1px solid #A67356;
   color: #f2f2f2;
@@ -261,11 +271,12 @@
     font-size: 16px;
   }
   .page-block__button-brown {
-    width: 180px;
+    padding: 5px 40px;
     min-height: 50px;
+    font-size: 16px;
   }
   .page-block__button {
-    width: 180px;
+    padding: 5px 50px;
     min-height: 50px;
   }
   .page-block__button-link {
@@ -355,5 +366,56 @@
   }
   .page-block__content > *:not(:last-child) {
     margin-bottom: 38px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-block__button-brown {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .page-block__content {
+    max-width: 460px;
+    padding: 160px 0 120px 0;
+  }
+  .page-block__heading {
+    font-size: 60px;
+  }
+  .page-block__text {
+    font-size: 14px;
+  }
+  .page-block__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-block__buttons > *:not(:last-child) {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .page-block__content {
+    max-width: 410px;
+  }
+  .page-block__heading {
+    font-size: 52px;
+  }
+  .page-block__text {
+    font-size: 14px;
+  }
+  .page-block__buttons > *:not(:last-child) {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .page-block__content {
+    max-width: 340px;
+  }
+  .page-block__heading {
+    font-size: 44px;
   }
 }
