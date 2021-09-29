@@ -236,6 +236,54 @@
   z-index: 200;
 }
 
+.cards {
+  margin-bottom: 300px;
+}
+.cards__container {
+  position: relative;
+}
+.cards__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -60px -40px;
+  padding: 0 15px;
+  position: absolute;
+  left: 0;
+}
+.cards__item {
+  height: 100%;
+}
+.cards__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+.cards__text {
+  font-size: 18px;
+  color: #403F3E;
+  font-weight: 400;
+  line-height: 127%;
+}
+
+.item {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(64, 63, 62, 0.31);
+          box-shadow: 0px 0px 16px -1px rgba(64, 63, 62, 0.31);
+  margin: 0 40px;
+  padding: 20px 40px;
+}
+.item__num {
+  font-family: "Bitter", serif;
+  color: rgba(166, 115, 86, 0.75);
+  font-size: 140px;
+  line-height: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+
 @media screen and (max-width: 1440px) {
   .page-block__image img {
     -o-object-position: right;

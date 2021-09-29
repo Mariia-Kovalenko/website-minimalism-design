@@ -231,6 +231,45 @@ $light-brown: #A67356;
     }
 }
 
+.cards{
+    margin-bottom: 300px;
+    &__container{
+        position: relative;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -60px -40px;
+        padding: 0 15px;
+        position: absolute;
+        left: 0;
+    }
+    &__item{
+        height: 100%;
+    }
+    &__column{
+        flex: 0 1 33.333%;
+    }
+    &__text{
+        @include font(18px, $text-color, 400, 127%);
+    }
+}
+
+.item{
+    background-color: white;
+    box-shadow: 0px 0px 16px -1px rgba(64, 63, 62, 0.31);
+    margin: 0 40px;
+    padding: 20px 40px;
+
+    &__num{
+        font-family: $second-font;
+        color: rgba(166, 115, 86, 0.75);
+        font-size: 140px;
+        line-height: 100%;
+        font-weight: 400;
+        text-align: center;
+    }
+}
 
 
 
