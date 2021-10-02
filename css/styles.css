@@ -237,17 +237,12 @@
 }
 
 .cards {
-  margin-bottom: 300px;
+  margin-bottom: 350px;
 }
 .cards__container {
   position: relative;
 }
 .cards__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: -60px -40px;
   padding: 0 15px;
   position: absolute;
@@ -274,6 +269,7 @@
           box-shadow: 0px 0px 16px -1px rgba(64, 63, 62, 0.31);
   margin: 0 40px;
   padding: 20px 40px;
+  min-width: 300px;
 }
 .item__num {
   font-family: "Bitter", serif;
@@ -355,6 +351,14 @@
   .page-block__content > *:not(:last-child) {
     margin-bottom: 48px;
   }
+
+  .cards {
+    margin-bottom: 270px;
+  }
+
+  .item__num {
+    font-size: 120px;
+  }
 }
 @media screen and (max-width: 1090px) {
   .header__logo {
@@ -371,6 +375,26 @@
   .page-block__content {
     max-width: 428px;
   }
+
+  .cards__items {
+    margin: -60px -30px;
+  }
+
+  .item {
+    margin: 0 30px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .cards__items {
+    margin: -60px -20px;
+  }
+
+  .item {
+    margin: 0 20px;
+  }
+  .item__num {
+    font-size: 110px;
+  }
 }
 @media screen and (max-width: 1020px) {
   .header {
@@ -383,6 +407,25 @@
 
   .page-block__image {
     opacity: 0.55;
+  }
+
+  .cards {
+    margin-bottom: 420px;
+  }
+  .cards__column:not(:nth-child(3)) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-bottom: 30px;
+  }
+  .cards__column:nth-child(3) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .item__num {
+    font-size: 94px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -416,6 +459,24 @@
     margin-bottom: 38px;
   }
 }
+@media screen and (min-width: 670px) {
+  .cards__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 670px) {
+  .cards {
+    margin-bottom: 600px;
+  }
+
+  .item__num {
+    font-size: 85px;
+  }
+}
 @media screen and (max-width: 480px) {
   .page-block__button-brown {
     -webkit-box-flex: 1;
@@ -443,6 +504,10 @@
     margin-bottom: 25px;
     margin-right: 0;
   }
+
+  .cards {
+    margin-bottom: 620px;
+  }
 }
 @media screen and (max-width: 430px) {
   .page-block__content {
@@ -458,6 +523,10 @@
     margin-bottom: 25px;
     margin-right: 0;
   }
+
+  .cards {
+    margin-bottom: 700px;
+  }
 }
 @media screen and (max-width: 380px) {
   .page-block__content {
@@ -465,5 +534,9 @@
   }
   .page-block__heading {
     font-size: 44px;
+  }
+
+  .cards {
+    margin-bottom: 750px;
   }
 }
