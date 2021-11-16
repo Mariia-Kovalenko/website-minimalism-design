@@ -119,6 +119,16 @@
   background-color: #403F3E;
 }
 
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  color: #454444;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 76px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -283,15 +293,6 @@
 .projects {
   margin-bottom: 100px;
 }
-.projects__heading {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 50px;
-  color: #454444;
-  font-weight: 700;
-  line-height: 100%;
-  margin-bottom: 76px;
-}
 .projects__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,6 +393,29 @@
   text-decoration: underline;
 }
 
+.partners {
+  margin-bottom: 100px;
+}
+.partners__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 15px;
+}
+.partners__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+}
+
 @media screen and (max-width: 1440px) {
   .page-block__image img {
     -o-object-position: right;
@@ -473,7 +497,7 @@
     margin-bottom: 270px;
   }
 
-  .project__heading {
+  .heading {
     font-size: 32px;
   }
 }
@@ -501,11 +525,12 @@
     margin: 0 30px;
   }
 
-  .project__heading {
-    font-size: 29px;
-  }
   .project__text {
     font-size: 16px;
+  }
+
+  .heading {
+    font-size: 29px;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -520,7 +545,7 @@
     font-size: 110px;
   }
 
-  .project__heading {
+  .heading {
     font-size: 26px;
   }
 }
@@ -556,7 +581,7 @@
     font-size: 94px;
   }
 
-  .projects__heading {
+  .heading {
     font-size: 46px;
     margin-bottom: 70px;
   }
@@ -564,6 +589,41 @@
   .project__link {
     font-size: 16px;
     margin-right: 11px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .partners__items {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .partners__items > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .partners__items > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .partners__items > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .partners__items > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .partners__items > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .partners__items > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .partners__item {
+    margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 850px) {
@@ -636,7 +696,7 @@
     font-size: 85px;
   }
 
-  .projects__heading {
+  .heading {
     font-size: 43px;
     margin-bottom: 60px;
   }
@@ -653,7 +713,7 @@
     margin-right: 11px;
   }
 
-  .projects__heading {
+  .heading {
     font-size: 38px;
     margin-bottom: 56px;
   }
@@ -664,6 +724,46 @@
 
   .projects__more-button {
     margin-top: 35px;
+  }
+
+  .partners__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .partners__items > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .partners__items > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .partners__items > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .partners__items > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .partners__items > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .partners__items > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .partners__item {
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -701,8 +801,9 @@
   .project {
     padding: 20px;
   }
-  .project__heading {
-    font-size: 26px;
+
+  .heading {
+    font-size: 32px;
   }
 
   .projects__more-button {
@@ -765,5 +866,13 @@
 
   .item {
     margin: 0;
+  }
+
+  .partners__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .partners__item {
+    margin-bottom: 45px;
   }
 }
