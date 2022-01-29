@@ -895,13 +895,17 @@ $light-brown: #A67356;
         flex-direction: column;
         align-items: flex-start;
         background-color: white;
+        box-shadow: -13px 0px 39px 17px rgba(0, 0, 0, 0.15);
         height: 100vh;
         width: 300px;
         // padding: 120px 20px 0 15px;
         top:0;
         right:-310px;
-        transition: all .4s linear;
+        transition: all .3s ease-out;
         // display: none;
+    }
+    .menu__link{
+        font-size: 24px;
     }
     .menu__item:not(:last-child){
         margin-right: 0;
