@@ -435,6 +435,9 @@
   padding: 0 15px;
 }
 
+.contact {
+  margin-bottom: 50px;
+}
 .contact__preheading {
   font-family: "Bitter";
   font-style: normal;
@@ -513,6 +516,87 @@
   font-size: 20px;
   color: white;
   outline: none;
+}
+
+.footer {
+  background-color: #403F3E;
+  color: #E7E7E7;
+  font-family: "Bitter", serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 35px 0;
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__social-media {
+  margin-bottom: 30px;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+}
+.column__heading {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.column__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.column__media > *:not(:last-child) {
+  margin-right: 20px;
+}
+.column__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #E7E7E7;
+}
+.column__input {
+  display: block;
+  margin-bottom: 20px;
+  background: transparent;
+  width: 320px;
+  height: 40px;
+  border: 1px solid #FFFFFF;
+  padding: 15px;
+}
+.column__input::-webkit-input-placeholder {
+  color: white;
+}
+.column__input::-moz-placeholder {
+  color: white;
+}
+.column__input:-ms-input-placeholder {
+  color: white;
+}
+.column__input::-ms-input-placeholder {
+  color: white;
+}
+.column__input::placeholder {
+  color: white;
+}
+.column__input:focus {
+  outline: none;
+  color: white;
+}
+.column__btn {
+  width: 320px;
+  height: 40px;
+  background: white;
+  color: #403F3E;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1440px) {

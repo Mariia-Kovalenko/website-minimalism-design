@@ -19,9 +19,11 @@ body {
   font-family: "Bitter", serif;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a[class] {

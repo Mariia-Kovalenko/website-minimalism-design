@@ -456,6 +456,7 @@ $light-brown: #A67356;
 }
 
 .contact{
+    margin-bottom: 50px;
     &__preheading{
         font-family: 'Bitter';
         font-style: normal;
@@ -522,8 +523,72 @@ $light-brown: #A67356;
 }
 
 
+.footer{
+    background-color: $text-color;
+    color: #E7E7E7;
+    font-family: $second-font;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 35px 0;
 
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social-media{
+        margin-bottom: 30px;
+    }
+}
 
+.column{
+    & ul li{
+        margin-bottom: 8px;
+    }
+    &__heading{
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    &__media{
+        display: flex;
+        & > *:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+    &__link{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        color: #E7E7E7;
+    }
+    &__input{
+        display: block;
+        margin-bottom: 20px;
+        background: transparent;
+        width: 320px;
+        height: 40px;
+        border: 1px solid #FFFFFF;
+        padding: 15px;
+
+        &::placeholder{
+            color: white;
+        }
+        &:focus{
+            outline: none;
+            color: white;
+        }
+    }
+    &__btn{
+        width: 320px;
+        height: 40px;
+        background: white;
+        color: $text-color;
+        border: none;
+        cursor:pointer;
+    }
+}
 
 @media screen and (max-width: 1440px){
     .page-block__image img{
